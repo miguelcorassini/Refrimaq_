@@ -77,3 +77,8 @@ body {
     width: 1px;
     background-color: #ccc;
  }
+
+ /* banner */
+ .banner {
+    max-height: 492px;
+ }

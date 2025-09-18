@@ -1,7 +1,42 @@
 body {
-    font-family: 'roboto', sans-serif;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fff;
 }
 
-.inicio {
-    border: 5px rgba(156, 15, 15, 0.836);
-}
+/* Cabeçalho Refrimaq */
+ .topo-superior {
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    border-bottom: 2px solid #ccc;
+ }
+
+ /* Container Topo */
+ .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+ }
+
+ /* logo */
+ .logo {
+    max-height: 55px;
+ }
+
+ /* Bloco de telefone fundo vermelho */
+ .agendamento {
+    background-color: #a00;
+    color: #fff;
+    padding: 6px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+ }
+ .agendamento strong {
+    font-size: 16px;
+ }

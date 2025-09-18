@@ -40,3 +40,40 @@ body {
  .agendamento strong {
     font-size: 16px;
  }
+
+ /* menu navegação */
+ .menu-navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 14px 0;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+ }
+
+ /* links de menu */
+ .menu-navegacao a {
+    color: #a00;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 15px;
+    position: relative;
+    padding: 4px 0;
+ }
+
+ /* hover em tons escuros(muda a cor do botao) */
+ .menu-navegacao a:hover {
+    color: #700;
+ }
+
+ /* linhas de separação do menu */
+ .menu-navegacao a:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 2px;
+    height: 20px;
+    width: 1px;
+    background-color: #ccc;
+ }

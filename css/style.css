@@ -78,7 +78,170 @@ body {
     background-color: #ccc;
  }
 
- /* banner */
- .banner {
-    max-height: 492px;
+ /* hero */
+ .hero {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
  }
+
+ .hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+ }
+
+/* =============================
+   SEÇÃO COM BANNER PRONTO (imagem + texto)
+   ============================= */
+.banner-conserto {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.banner-conserto .banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Texto por cima da imagem */
+.texto-banner {
+  position: absolute;
+  right: 12%;          /* Estava 8% — mais à esquerda */
+  top: 80px;          /* Estava 100px — agora mais acima */
+  bottom: auto;       /* Remove restrição de base */
+  transform: none;    /* Remove centralização vertical */
+  color: white;
+  max-width: 500px;
+  padding: 20px;
+  background: transparent;
+}
+
+
+.texto-banner h2 {
+  font-size: 36px;           /* Título maior */
+  font-weight: 800;          /* BEM negrito */
+  margin-bottom: 25px;
+}
+
+.texto-banner ul {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  font-size: 20px;           /* Texto da lista maior */
+  line-height: 1.6;
+}
+
+.texto-banner li {
+  margin-bottom: 12px;
+}
+
+/* Botão mais destacado */
+.botao-branco {
+  font-size: 20px;
+  font-weight: 800;
+  padding: 14px 28px;
+  border-radius: 30px;
+  background-color: #fff;
+  color: #a00;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.botao-branco:hover {
+  background-color: #f4f4f4;
+  color: #700;
+}
+
+/* marcas */
+/* Container */
+.logos {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Título */
+.titulo-marcas {
+  font-size: 28px;
+  font-weight: bold;
+  color: #b30000;
+  margin-bottom: 40px;
+}
+
+/* Grade das logos */
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 logos por linha */
+  gap: 40px 60px; /* espaçamento (vertical, horizontal) */
+  align-items: center;
+  justify-items: center;
+}
+
+/* Logos todas iguais */
+.logos-grid img {
+  max-width: 150px;  /* largura padrão */
+  max-height: 70px;  /* altura padrão */
+  object-fit: contain; /* mantém proporção dentro do box */
+}
+
+/* Responsivo: em telas menores, 2 logos por linha */
+@media (max-width: 768px) {
+  .logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 40px;
+  }
+  .logos-grid img {
+    max-width: 120px;
+    max-height: 60px;
+  }
+  .titulo-marcas {
+    font-size: 22px;
+  }
+}
+
+/* assistencia */
+/* Container */
+.assistencia-tecnica {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Título */
+.titulo-assistencia {
+  font-size: 28px;
+  font-weight: bold;
+  color: #b30000;
+  margin-bottom: 40px;
+}
+
+/* Grid */
+.assistencia-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+/* Cada item */
+.assistencia-item img {
+  width: 100%;
+  max-width: 350px; /* controla o tamanho das imagens */
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+/* Texto */
+.assistencia {
+  font-size: 18px;
+  font-weight: 600;
+  color: #555; /* cinza escuro */
+  max-width: 300px;
+  margin: 0 auto;
+  line-height: 1.4;
+}

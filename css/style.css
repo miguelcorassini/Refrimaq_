@@ -167,10 +167,11 @@ body {
 
 /* Título */
 .titulo-marcas {
-  font-size: 28px;
-  font-weight: bold;
-  color: #b30000;
+  font-size: 32px;
+  font-weight: 800;
+  color: #a00;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 /* Grade das logos */
@@ -180,27 +181,43 @@ body {
   gap: 40px 60px; /* espaçamento (vertical, horizontal) */
   align-items: center;
   justify-items: center;
+  padding: 20px 10px;
 }
 
 /* Logos todas iguais */
 .logos-grid img {
-  max-width: 150px;  /* largura padrão */
-  max-height: 70px;  /* altura padrão */
+  width: 180px;  /* largura padrão */
+  height: auto;  /* altura padrão */
   object-fit: contain; /* mantém proporção dentro do box */
+  transition: transform 0.3s ease;
+}
+
+/* mudar o tamanho com o mouse */
+.logos-grid img:hover {
+  transform: scale(1.05);
 }
 
 /* Responsivo: em telas menores, 2 logos por linha */
 @media (max-width: 768px) {
   .logos-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px 40px;
+    gap: 30px;
   }
   .logos-grid img {
-    max-width: 120px;
-    max-height: 60px;
+    width: 160px;
   }
   .titulo-marcas {
     font-size: 22px;
+  }
+}
+
+/* pra celular */
+@media (max-width: 480px) {
+  .logos-grid {
+    grid-template-columns: 1fr;
+  }
+  .logos-grid img {
+    width: 140px;
   }
 }
 
@@ -245,3 +262,100 @@ body {
   margin: 0 auto;
   line-height: 1.4;
 }
+
+/* =============================
+   SEÇÃO INSTITUCIONAL (Missão / Visão)
+   ============================= */
+
+.institucional {
+  position: relative;
+  /* Imagem de fundo: coloque em imagens/banner_vermelho.jpg */
+  background-image: url("../imagens/banner_vermelho.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  padding: 80px 20px 60px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.institucional::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(170, 0, 0, 0.8);
+}
+
+/* Overlay vermelho translúcido para garantir legibilidade do texto */
+.institucional .overlay {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  background: rgba(160, 0, 0, 0.78); /* ajuste a opacidade entre 0.5 e 0.9 conforme desejar */
+  z-index: 1;
+  /* opcional: suaviza o fundo em navegadores que suportam */
+  backdrop-filter: saturate(120%) blur(2px);
+}
+
+.institucional-container {
+  position: relative;
+  z-index: 2; /* fica acima do overlay */
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.logo-institucional {
+  max-width: 300px;
+  width: 80%;
+  height: auto;
+  margin: 0 auto 30px;
+  display: block;
+}
+
+/* Texto centralizado e com largura limitada para melhor leitura */
+.conteudo-sobre {
+  margin: 0 auto;
+  color: #fff;
+}
+
+.conteudo-sobre p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin: 0 auto 24px;
+  max-width: 760px;
+}
+
+/* Botão */
+.institucional .botao-branco {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 34px;
+  border-radius: 30px;
+  background-color: #fff;
+  color: #a00;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform .18s ease, box-shadow .18s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  margin-top: 18px;
+}
+
+.institucional .botao-branco:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+  .conteudo-sobre p { font-size: 17px; max-width: 640px; }
+  .logo-institucional { max-width: 240px; }
+}
+
+@media (max-width: 600px) {
+  .institucional { padding: 50px 14px; }
+  .conteudo-sobre p { font-size: 15px; line-height: 1.7; max-width: 420px; }
+  .logo-institucional { max-width: 180px; margin-bottom: 18px; }
+  .institucional .botao-branco { font-size: 15px; padding: 10px 22px; }
+}
+

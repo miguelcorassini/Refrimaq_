@@ -359,3 +359,253 @@ body {
   .institucional .botao-branco { font-size: 15px; padding: 10px 22px; }
 }
 
+/* =============================
+   SEÇÃO AVALIAÇÕES (fundo branco)
+   ============================= */
+.avaliacoes {
+  background-color: #fff8f8; /* fundo branco */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.avaliacoes-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+}
+
+.avaliacao-item {
+  flex: 1;
+  max-width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: left;
+  position: relative;
+}
+
+.avaliacao-item::before {
+  content: "❝";
+  font-size: 40px;
+  color: #f0c000; /* amarelo */
+  position: absolute;
+  top: -15px;
+  left: -10px;
+  font-weight: bold;
+}
+
+.avaliacao-item p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.avaliacao-item em {
+  margin-top: 15px;
+  font-style: italic;
+  display: block;
+  color: #900;
+}
+
+/* Botão vermelho */
+.botao-vermelho {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 34px;
+  border-radius: 30px;
+  background-color: #a00;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color .3s, transform .2s;
+}
+
+.botao-vermelho:hover {
+  background-color: #700;
+  transform: translateY(-3px);
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+  .avaliacoes-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .avaliacoes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =============================
+   RODAPÉ
+   ============================= */
+.rodape {
+  background-color: #111;
+  color: #fff;
+  padding: 50px 20px 30px;
+  font-size: 15px;
+}
+
+.rodape .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rodape__colunas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.rodape__coluna h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.rodape__coluna p {
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+.rodape__copy {
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+}
+
+.logo-footer {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .rodape__colunas {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .rodape__colunas {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+/* =============================
+   AJUSTES MOBILE
+   ============================= */
+
+/* Até 768px (tablets) */
+@media (max-width: 768px) {
+  /* topo */
+  .header-container {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .agendamento {
+    margin-top: 8px;
+    font-size: 13px;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  /* menu vira colunas mais compactas */
+  .menu-navegacao {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .menu-navegacao a {
+    font-size: 14px;
+  }
+
+  /* assistencia em 2 colunas */
+  .assistencia-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+/* Até 480px (celulares) */
+@media (max-width: 480px) {
+  /* hero */
+  .hero img {
+    height: auto;
+  }
+
+  /* banner com texto abaixo da imagem */
+  .texto-banner {
+    position: static;
+    background: #a00;
+    color: #fff;
+    margin-top: -4px;
+    padding: 20px;
+    text-align: center;
+  }
+  .texto-banner h2 {
+    font-size: 22px;
+  }
+  .texto-banner ul {
+    font-size: 15px;
+    margin: 10px 0 20px;
+  }
+  .botao-branco {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  /* logos em 2 por linha */
+  .logos-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .logos-grid img {
+    width: 120px;
+  }
+
+  /* assistencia em 1 coluna */
+  .assistencia-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  /* institucional */
+  .institucional {
+    padding: 40px 10px;
+    text-align: center;
+  }
+  .conteudo-sobre p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* avaliações em 1 por linha */
+  .avaliacoes-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .avaliacao-item {
+    max-width: 100%;
+  }
+
+  /* rodapé colunas empilhadas */
+  .rodape__colunas {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+}
